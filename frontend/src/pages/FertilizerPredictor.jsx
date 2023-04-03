@@ -55,7 +55,7 @@ export default function FertilizerPredictor() {
         width: '78%',
         margin: 5,
       }}>
-      <h1>Fertilizer Reccomendor</h1>
+      <h1>Fertilizer Recommendator</h1>
       <Divider sx={{ marginBottom: 3 }} />
       <Grid container spacing={2}>
         <Grid item xs={5} sx={{

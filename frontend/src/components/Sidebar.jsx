@@ -47,7 +47,7 @@ export default function Sidebar() {
                         <ListItemIcon>
                             <GrassOutlinedIcon sx={{color:'white'}} />
                         </ListItemIcon>
-                        <ListItemText primary="Crop Prdictor" />
+                        <ListItemText primary="Crop Recommendator" />
                     </ListItemButton>
                 </ListItem>
 
@@ -56,7 +56,7 @@ export default function Sidebar() {
                         <ListItemIcon>
                             <BackpackOutlinedIcon sx={{color:'white'}} />
                         </ListItemIcon>
-                        <ListItemText primary="Fertilizer Predictor" />
+                        <ListItemText primary="Fertilizer Recommendator" />
                     </ListItemButton>
                 </ListItem>
 

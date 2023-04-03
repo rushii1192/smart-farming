@@ -58,7 +58,7 @@ ROOT_URLCONF = 'smartFarming.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['build'],
+        'DIRS': ['frontend/build'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -54,7 +54,7 @@ export default function CropPredictor() {
             }}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
-                    <h1>Crop Reccomendor</h1>
+                    <h1>Crop Recommendator</h1>
                     <Divider sx={{ marginBottom: 3 }} />
                 </Grid>
                 <Grid item xs={5} sx={{

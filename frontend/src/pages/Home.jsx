@@ -3,6 +3,9 @@ import mainImg from '../images/main-img.jpg';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
+import GrassOutlinedIcon from '@mui/icons-material/GrassOutlined';
+import BackpackOutlinedIcon from '@mui/icons-material/BackpackOutlined';
+
 
 
 
@@ -29,6 +32,21 @@ export default function Home() {
           </p>
           <p>
             By leveraging this data, farmers can make more informed decisions about when to plant, fertilize, irrigate, and harvest crops, and can even tailor their approach to specific areas of their fields. This can help to increase efficiency, reduce waste, and ultimately improve crop yields and profitability.
+          </p>
+        </Grid>
+        <Grid item xs={12}>
+          <h2>Our Tools</h2>
+          <Divider />
+          <h3><GrassOutlinedIcon /> Crop Recommendator </h3>
+          <p>
+            Crop recommendation is the process of providing farmers with advice on which crops to grow based on various factors such as soil quality, climate, market demand, and profitability. Crop recommendation systems use data and models to provide farmers with tailored advice on which crops are most suitable for their specific farm conditions.
+
+            Crop recommendation systems typically take into account various factors such as soil type, soil fertility, water availability, climate, and market demand. This information is then used to recommend the most suitable crops for planting. Additionally, crop recommendation systems can provide advice on the optimal planting time, fertilization, and irrigation strategies for specific crops.
+          </p>
+          <h3><BackpackOutlinedIcon /> Fertilizer Recommendator </h3>
+          <p>
+            A fertilizer recommendator is a tool or system that helps farmers to determine the optimal fertilizer application rates for their crops. It takes into account various factors such as soil type, soil fertility, crop type, and growth stage to provide tailored recommendations for fertilizer application.
+            Fertilizer recommendators can help farmers to optimize crop yields, reduce fertilizer waste, and minimize environmental impact. By providing tailored recommendations based on local soil conditions, crop type, and growth stage, farmers can apply fertilizers more efficiently and effectively, leading to better crop production outcomes.
           </p>
         </Grid>
       </Grid>

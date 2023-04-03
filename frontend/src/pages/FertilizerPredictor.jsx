@@ -8,6 +8,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import axios from "axios";
+import mainImg from '../images/fertilizer-prediction.jpg';
 
 
 export default function FertilizerPredictor() {
@@ -33,7 +34,7 @@ export default function FertilizerPredictor() {
       "temperature": parseInt(temperature),
       "humidity": parseInt(humidity),
       "soil_type": parseInt(soilType),
-      "moisture":parseInt(moisture),
+      "moisture": parseInt(moisture),
       "crop_type": parseInt(cropType)
     }
 
@@ -57,38 +58,47 @@ export default function FertilizerPredictor() {
       <h1>Fertilizer Reccomendor</h1>
       <Divider sx={{ marginBottom: 3 }} />
       <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <TextField id="nitrogen" label="Nitrogen" variant="outlined" sx={{
-            width: "100%",
-          }} onChange={(e) => setNitrogen(e.target.value)} />
+        <Grid item xs={5} sx={{
+          marginLeft: 5,
+          marginTop: 0
+        }}>
+          <img src={mainImg} alt="" srcset="" width="100%" />
+        </Grid>
+        <Grid container xs={4} sx={{ margin: 2 }} spacing={2}>
+          <Grid item xs={12}>
+            <TextField id="nitrogen" label="Nitrogen" variant="outlined" sx={{
+              width: "100%",
+            }} onChange={(e) => setNitrogen(e.target.value)} />
 
-        </Grid>
-        <Grid item xs={4}>
-          <TextField id="Pottasium" label="Pottasium" variant="outlined" sx={{
-            width: "100%",
-          }} onChange={(e) => setPottassium(e.target.value)} />
-        </Grid>
-        <Grid item xs={4}>
-          <TextField id="Phosphorous" label="Phosphorous" variant="outlined" sx={{
-            width: "100%",
-          }} onChange={(e) => setPhosphorus(e.target.value)} />
-        </Grid>
-        <Grid item xs={4}>
-          <TextField id="Temperature" label="Temperature" variant="outlined" sx={{
-            width: "100%",
-          }} onChange={(e) => setTemperature(e.target.value)} />
-        </Grid>
-        <Grid item xs={4}>
-          <TextField id="Humidity" label="Humidity" variant="outlined" sx={{
-            width: "100%",
-          }} onChange={(e) => setHumidity(e.target.value)} />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField id="Pottasium" label="Pottasium" variant="outlined" sx={{
+              width: "100%",
+            }} onChange={(e) => setPottassium(e.target.value)} />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField id="Phosphorous" label="Phosphorous" variant="outlined" sx={{
+              width: "100%",
+            }} onChange={(e) => setPhosphorus(e.target.value)} />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField id="Temperature" label="Temperature" variant="outlined" sx={{
+              width: "100%",
+            }} onChange={(e) => setTemperature(e.target.value)} />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField id="Humidity" label="Humidity" variant="outlined" sx={{
+              width: "100%",
+            }} onChange={(e) => setHumidity(e.target.value)} />
+          </Grid>
+
         </Grid>
         <Grid item xs={4}>
           <TextField id="moisture" label="Moisture" variant="outlined" sx={{
             width: "100%",
           }} onChange={(e) => setMoisture(e.target.value)} />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
@@ -106,7 +116,7 @@ export default function FertilizerPredictor() {
             <MenuItem value={4}>Sandy</MenuItem>
           </Select>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
@@ -130,10 +140,10 @@ export default function FertilizerPredictor() {
             <MenuItem value={10}>Pulses</MenuItem>
           </Select>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12}>
           <Button
             variant="contained"
-            sx={{ width: '100%', backgroundColor:'#b5b823' }}
+            sx={{ width: '100%', backgroundColor: '#b5b823' }}
             onClick={onClickHandler}
           >Predict</Button>
         </Grid>

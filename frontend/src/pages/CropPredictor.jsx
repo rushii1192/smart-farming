@@ -63,7 +63,7 @@ export default function CropPredictor() {
                 }}>
                     <img src={mainImg} alt="" srcset="" width="100%" />
                 </Grid>
-                <Grid container xs={4}>
+                <Grid container xs={4} sx={{margin:2}}>
                     <Grid item xs={12} spacing={2}>
                         <TextField id="nitrogen" label="Nitrogen" variant="outlined" sx={{
                             width: "100%",

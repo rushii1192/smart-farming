@@ -6,6 +6,8 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 import axios from "axios";
+import mainImg from '../images/crop-prediction.jpg';
+
 
 
 export default function CropPredictor() {
@@ -33,14 +35,14 @@ export default function CropPredictor() {
             "rainfall": parseInt(rainfall)
         }
 
-        axios.post('/predict-crop/', data, {headers:{"Content-Type" : "application/json"}})
+        axios.post('/predict-crop/', data, { headers: { "Content-Type": "application/json" } })
             .then((res) => {
                 console.log(res.data);
 
                 setShowAnswer("block");
                 setAnswer(res.data.message);
             })
-            .catch((err)=>console.log(err));
+            .catch((err) => console.log(err));
 
     }
 
@@ -50,51 +52,61 @@ export default function CropPredictor() {
                 width: '78%',
                 margin: 5,
             }}>
-            <h1>Crop Reccomendor</h1>
-            <Divider sx={{ marginBottom: 3 }} />
             <Grid container spacing={2}>
-                <Grid item xs={4}>
-                    <TextField id="nitrogen" label="Nitrogen" variant="outlined" sx={{
-                        width: "100%",
-                    }} onChange={(e) => setNitrogen(e.target.value)} />
+                <Grid item xs={12}>
+                    <h1>Crop Reccomendor</h1>
+                    <Divider sx={{ marginBottom: 3 }} />
+                </Grid>
+                <Grid item xs={5} sx={{
+                    marginLeft: 5,
+                    marginTop: 0
+                }}>
+                    <img src={mainImg} alt="" srcset="" width="100%" />
+                </Grid>
+                <Grid container xs={4}>
+                    <Grid item xs={12} spacing={2}>
+                        <TextField id="nitrogen" label="Nitrogen" variant="outlined" sx={{
+                            width: "100%",
+                        }} onChange={(e) => setNitrogen(e.target.value)} />
 
-                </Grid>
-                <Grid item xs={4}>
-                    <TextField id="Pottasium" label="Pottasium" variant="outlined" sx={{
-                        width: "100%",
-                    }} onChange={(e) => setPottassium(e.target.value)} />
-                </Grid>
-                <Grid item xs={4}>
-                    <TextField id="Phosphorous" label="Phosphorous" variant="outlined" sx={{
-                        width: "100%",
-                    }} onChange={(e) => setPhosphorus(e.target.value)} />
-                </Grid>
-                <Grid item xs={6}>
-                    <TextField id="Temperature" label="Temperature" variant="outlined" sx={{
-                        width: "100%",
-                    }} onChange={(e) => setTemperature(e.target.value)} />
-                </Grid>
-                <Grid item xs={6}>
-                    <TextField id="Humidity" label="Humidity" variant="outlined" sx={{
-                        width: "100%",
-                    }} onChange={(e) => setHumidity(e.target.value)} />
-                </Grid>
-                <Grid item xs={6}>
-                    <TextField id="ph" label="ph" variant="outlined" sx={{
-                        width: "100%",
-                    }} onChange={(e) => setPh(e.target.value)} />
-                </Grid>
-                <Grid item xs={6}>
-                    <TextField id="Rainfall" label="Rainfall" variant="outlined" sx={{
-                        width: "100%",
-                    }} onChange={(e) => setRainfall(e.target.value)} />
-                </Grid>
-                <Grid item xs={4}>
-                    <Button
-                        variant="contained"
-                        sx={{ width: '100%', backgroundColor:'#b5b823' }}
-                        onClick={onClickHandler}
-                    >Predict</Button>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField id="Pottasium" label="Pottasium" variant="outlined" sx={{
+                            width: "100%",
+                        }} onChange={(e) => setPottassium(e.target.value)} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField id="Phosphorous" label="Phosphorous" variant="outlined" sx={{
+                            width: "100%",
+                        }} onChange={(e) => setPhosphorus(e.target.value)} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField id="Temperature" label="Temperature" variant="outlined" sx={{
+                            width: "100%",
+                        }} onChange={(e) => setTemperature(e.target.value)} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField id="Humidity" label="Humidity" variant="outlined" sx={{
+                            width: "100%",
+                        }} onChange={(e) => setHumidity(e.target.value)} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField id="ph" label="ph" variant="outlined" sx={{
+                            width: "100%",
+                        }} onChange={(e) => setPh(e.target.value)} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField id="Rainfall" label="Rainfall" variant="outlined" sx={{
+                            width: "100%",
+                        }} onChange={(e) => setRainfall(e.target.value)} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Button
+                            variant="contained"
+                            sx={{ width: '100%', backgroundColor: '#b5b823' }}
+                            onClick={onClickHandler}
+                        >Predict</Button>
+                    </Grid>
                 </Grid>
                 <Grid item xs={12} sx={{
                     display: showAnswer
